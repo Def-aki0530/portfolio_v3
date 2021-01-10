@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import top from "~/components/topWrapper"
-import about from "~/components/aboutWrapper"
-import works from "~/components/worksWrapper"
-import contact from "~/components/contactWrapper"
+import top from "~/components/top"
+import about from "~/components/about"
+import works from "~/components/works"
+import contact from "~/components/contact"
 
 export default {
   components: {

@@ -44,7 +44,7 @@ export default {
     position: fixed;
     z-index: 100;
     div{
-        width: calc(100% - 630px);
+        width: 62.5%;
     }
     a{
         width: 80px;
