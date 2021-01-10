@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="top" id="top">
       TOP
   </div>
 </template>
@@ -10,6 +10,7 @@ export default {}
 
 <style lang="scss">
 .top{
-    
+    width: 100%;
+    height: 100vh;
 }
 </style>
