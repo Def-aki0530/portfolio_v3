@@ -79,6 +79,9 @@ export default {}
     max-width: 1200px;
     width: 100%;
     margin: 80px 20px;
+    @include mq(sm) {
+        margin: 60px 20px;
+    }
 }
 
 .about-head{
@@ -119,7 +122,6 @@ export default {}
 
 .profile{
     font-size: 1rem;
-    font-weight: 400;
     color: $textColor;
     line-height: 1.5;
     margin-top: 20px;
