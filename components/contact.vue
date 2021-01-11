@@ -28,7 +28,7 @@ export default {}
     border-bottom: $textColor solid 5px;
     margin-top: 80px;
     @include mq(sm) {
-        margin-top: 60px;
+        margin-top: 40px;
     }
   }
   form{
@@ -127,7 +127,7 @@ export default {}
       }
     }
     @include mq(sm) {
-      margin: 40px 0 60px;
+      margin: 40px 0 40px;
     }
   }
 }

@@ -80,7 +80,7 @@ export default {}
     width: 100%;
     margin: 80px 20px;
     @include mq(sm) {
-        margin: 60px 20px;
+        margin: 40px 20px;
     }
 }
 

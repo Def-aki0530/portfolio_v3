@@ -5,7 +5,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '安西鴻輝のポートフォリオWebサイトです。過去にデザイン・コーディングをしたロゴやWebサイトを掲載しています。' }
+      { hid: 'description', name: 'description', content: '安西鴻輝のポートフォリオWebサイトです。過去にデザイン・コーディングをしたロゴやWebサイトを掲載しています。' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://anzaikouki-portfolio.netlify.app/' },
+      { hid: 'og:title', property: 'og:title', content: '安西鴻輝 ポートフォリオ' },
+      { hid: 'og:description', property: 'og:description', content: '安西鴻輝のポートフォリオWebサイトです。過去にデザイン・コーディングをしたロゴやWebサイトを掲載しています。' },
+      { hid: 'og:image', property: 'og:image', content: 'https://anzaikouki-portfolio.netlify.app/img/AnzaiKoukiPortfolio.jpg' },
     ],
     link: [
       {

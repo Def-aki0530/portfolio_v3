@@ -36,6 +36,9 @@ export default {}
     @include mq(lg) {
         width: 90%;
     }
+    @include mq(sm) {
+        width: 100%;
+    }
 }
 
 .main-visual{
