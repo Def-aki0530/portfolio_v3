@@ -1,73 +1,50 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        portfolio-v3
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="index-container">
+    <top />
+    <about />
+    <works :webDesignCoding='webDesignCoding' :teamLogo='teamLogo' :djLogo='djLogo'/>
+    <contact />
   </div>
 </template>
 
 <script>
-export default {}
+import axios from "axios";
+import top from "~/components/top"
+import about from "~/components/about"
+import works from "~/components/works"
+import contact from "~/components/contact"
+
+export default {
+  async asyncData() {
+    const getWebDesignCoding = axios.get('https://anzaikoukiportfolio.microcms.io/api/v1/webdesigncoding?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+    const getTeamLogo = axios.get('https://anzaikoukiportfolio.microcms.io/api/v1/teamlogo?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+    const getDjLogo = axios.get('https://anzaikoukiportfolio.microcms.io/api/v1/djlogo?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+  
+    let webDesignCoding_data;
+    let teamLogo_data;
+    let djLogo_data;
+
+    await Promise.all([getWebDesignCoding,getTeamLogo,getDjLogo]).then(values => {
+      webDesignCoding_data = values[0].data.contents
+      teamLogo_data = values[1].data.contents
+      djLogo_data = values[2].data.contents
+    })
+
+    return {
+      webDesignCoding: webDesignCoding_data,
+      teamLogo: teamLogo_data,
+      djLogo: djLogo_data,
+    }
+  },
+  components: {
+    top,
+    about,
+    works,
+    contact,
+  }
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
