@@ -1,3 +1,6 @@
+require('dotenv').config();
+const { API_KEY, BLOG_API_KEY } = process.env;
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -35,6 +38,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/dotenv'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -46,5 +50,8 @@ export default {
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+  env: {
+    API_KEY,
   }
 }

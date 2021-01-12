@@ -1,17 +1,19 @@
 <template>
   <div class="works-web">
-      <a href="" class="works-web-container">
-          <img src="" alt="">
+      <a v-for="elem in webDesignCoding" :key="elem.id" :href="elem.pageLink" class="works-web-container">
+          <img :src="elem.mainVisual.url" :alt="elem.pageName">
           <div class="web-text">
-              <div class="web-title">ページ名</div>
-              <div class="web-discription">ページ詳細</div>
+              <div class="web-title">{{elem.pageName}}</div>
+              <div class="web-discription">{{elem.pageDiscription}}</div>
           </div>
       </a>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+    props:["webDesignCoding"],
+}
 </script>
 
 <style lang="scss">
@@ -31,7 +33,7 @@ export default {}
         width: 360px;
         height: 200px;
         object-fit: cover;
-        filter: drop-shadow(3px 3px 6px $textColor);
+        filter: drop-shadow(3px 3px 6px #eee);
         @include mq(sm) {
             width: 100%;
         }

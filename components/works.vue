@@ -4,18 +4,18 @@
         <h2>WORKS</h2>
         <div>
           <worksTitle title="WEBデザイン＆コーディング"/>
-          <webDesignCoding />
+          <webDesignCoding :webDesignCoding="webDesignCoding"/>
         </div>
         <div>
           <worksTitle title="団体ロゴデザイン"/>
           <div class="logo-area">
-            <img src="" alt="">
+            <img v-for="elem in teamLogo" :key="elem.id" :src="elem.teamLogo.url" :alt="elem.logoName">
           </div>
         </div>
         <div>
           <worksTitle title="DJロゴデザイン"/>
           <div class="logo-area">
-            <img src="" alt="">
+            <img v-for="elem in djLogo" :key="elem.id" :src="elem.djLogo.url" :alt="elem.logoName">
           </div>
         </div>
       </div>
@@ -27,6 +27,11 @@ import worksTitle from "~/components/worksTitle";
 import webDesignCoding from "~/components/webDesignCoding";
 
 export default {
+  props:[
+      "webDesignCoding",
+      "teamLogo",
+      "djLogo"
+    ],
   components: {
     worksTitle,
     webDesignCoding,
@@ -60,7 +65,7 @@ export default {
 
 .logo-area{
   width: 100%;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   img{
     width: 360px;
