@@ -3,6 +3,7 @@ const { API_KEY, BLOG_API_KEY } = process.env;
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  target: 'static',
   head: {
     title: '安西鴻輝 ポートフォリオ',
     meta: [
