@@ -104,6 +104,7 @@ export default {}
 
 .name{
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     h2{
         font-size: 3.5rem;
