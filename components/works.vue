@@ -77,6 +77,7 @@ export default {
     margin: 20px 15px 0;
     @include mq(sm) {
         width: 100%;
+        height: auto;
     }
   }
 }
