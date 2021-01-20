@@ -117,7 +117,7 @@ export default {}
         font-weight: 700;
         color: $subColor;
         line-height: 1.5;
-        margin: 0 15px;
+        margin-left: 15px;
     }
 }
 
