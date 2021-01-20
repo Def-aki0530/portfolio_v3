@@ -67,6 +67,9 @@ export default {
   width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
+  @include mq(sm) {
+    width: calc(100% - 30px);
+  }
   img{
     width: 360px;
     height: 200px;
