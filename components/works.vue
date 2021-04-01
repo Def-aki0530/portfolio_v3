@@ -9,16 +9,16 @@
         <div>
           <worksTitle title="団体ロゴデザイン"/>
           <div class="logo-area">
-            <div>
-              <img v-for="elem in teamLogo" :key="elem.id" :src="elem.teamLogo.url" :alt="elem.logoName">
+            <div v-for="elem in teamLogo" :key="elem.id">
+              <img :src="elem.teamLogo.url" :alt="elem.logoName">
             </div>
           </div>
         </div>
         <div>
           <worksTitle title="DJロゴデザイン"/>
           <div class="logo-area">
-            <div>
-              <img v-for="elem in djLogo" :key="elem.id" :src="elem.djLogo.url" :alt="elem.logoName">
+            <div v-for="elem in djLogo" :key="elem.id">
+              <img :src="elem.djLogo.url" :alt="elem.logoName">
             </div>
           </div>
         </div>
