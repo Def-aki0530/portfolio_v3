@@ -71,9 +71,6 @@ export default {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  @include mq(sm) {
-    width: calc(100% - 30px);
-  }
   div{
     width: 360px;
     height: 200px;
