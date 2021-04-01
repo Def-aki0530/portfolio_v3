@@ -40,6 +40,7 @@ export default {}
     margin: 0 20px;
   }
   input{
+    -webkit-appearance: none;
     width: 100%;
     height: 1.8rem;
     background: #fff;
