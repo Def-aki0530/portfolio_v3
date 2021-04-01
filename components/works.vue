@@ -9,13 +9,17 @@
         <div>
           <worksTitle title="団体ロゴデザイン"/>
           <div class="logo-area">
-            <img v-for="elem in teamLogo" :key="elem.id" :src="elem.teamLogo.url" :alt="elem.logoName">
+            <div>
+              <img v-for="elem in teamLogo" :key="elem.id" :src="elem.teamLogo.url" :alt="elem.logoName">
+            </div>
           </div>
         </div>
         <div>
           <worksTitle title="DJロゴデザイン"/>
           <div class="logo-area">
-            <img v-for="elem in djLogo" :key="elem.id" :src="elem.djLogo.url" :alt="elem.logoName">
+            <div>
+              <img v-for="elem in djLogo" :key="elem.id" :src="elem.djLogo.url" :alt="elem.logoName">
+            </div>
           </div>
         </div>
       </div>
@@ -70,15 +74,20 @@ export default {
   @include mq(sm) {
     width: calc(100% - 30px);
   }
-  img{
+  div{
     width: 360px;
     height: 200px;
-    object-fit: cover;
-    margin: 20px 15px 0;
     @include mq(sm) {
-        width: 100%;
-        height: auto;
+          width: 100%;
+          height: auto;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: 20px 15px 0;
     }
   }
+
 }
 </style>
