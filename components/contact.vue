@@ -40,7 +40,6 @@ export default {}
     margin: 0 20px;
   }
   input{
-    -webkit-appearance: none;
     width: 100%;
     height: 1.8rem;
     background: #fff;
@@ -48,6 +47,8 @@ export default {}
     color: $textColor;
     font-family: "Noto Sans JP";
     outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
     border-style: none;
     border-bottom: $textColor solid 2px;
     margin-top: 40px;
@@ -64,6 +65,7 @@ export default {}
     color: $textColor;
     resize: none;
     outline: none;
+    border-radius: 0;
     border-style: none;
     border-bottom: $textColor solid 2px;
     margin-top: 40px;
