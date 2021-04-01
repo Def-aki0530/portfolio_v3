@@ -75,8 +75,8 @@ export default {
     width: calc(100% - 30px);
   }
   div{
-    width: 360px;
-    height: 200px;
+    width: 390px;
+    height: 220px;
     @include mq(sm) {
           width: 100%;
           height: auto;
