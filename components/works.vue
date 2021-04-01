@@ -69,7 +69,7 @@ export default {
 
 .logo-area{
   width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   @include mq(sm) {
     width: calc(100% - 30px);
