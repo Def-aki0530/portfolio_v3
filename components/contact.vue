@@ -41,7 +41,6 @@ export default {}
   }
   input{
     width: 100%;
-    height: 1.8rem;
     background: #fff;
     font-size: 1.2rem;
     color: $textColor;
