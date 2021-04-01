@@ -75,8 +75,9 @@ export default {
     width: calc(100% - 30px);
   }
   div{
-    width: 390px;
-    height: 220px;
+    width: 360px;
+    height: 200px;
+    margin: 20px 15px 0;
     @include mq(sm) {
           width: 100%;
           height: auto;
@@ -84,8 +85,7 @@ export default {
     img{
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      margin: 20px 15px 0;
+      object-fit: cover; 
     }
   }
 
