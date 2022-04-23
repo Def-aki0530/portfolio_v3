@@ -18,10 +18,8 @@
             </div>
             <div class="profile">
                 <p>誕生日：1999/05/30　出身：神奈川県</p>
-                <p>東京都市大学 メディア情報学部 情報システム学科 4年</p>
+                <p>東京都市大学 メディア情報学部 情報システム学科 卒業</p>
                 <p>大学進学後、デザインとコーディングのできるエンジニアを目指す</p>
-                <p>Webにおけるデザイン・フロントエンド・バックエンドを勉強中</p>
-                <p>研究室ではAIを専門に学習</p>
             </div>
             <div class="profile">開発言語　HTML/CSS/SASS/Vue.js/Nuxt.js/Ruby on Rails/PHP/JAVA/C</div>
         </div>
