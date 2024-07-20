@@ -45,9 +45,13 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/gtm',
   ],
   styleResources: {
     scss: ["~/assets/scss/variable.scss"],
+  },
+  gtm: {
+    id: 'GTM-K2VLZ2HX' // タグマネージャーのid
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
