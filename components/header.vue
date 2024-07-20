@@ -2,18 +2,18 @@
   <div class="header">
       <div class="pc-header">
         <div></div>
-        <nuxt-link tag="a" v-scroll-to="'#top'" to>TOP</nuxt-link>
-        <nuxt-link tag="a" v-scroll-to="'#about'" to>ABOUT</nuxt-link>
-        <nuxt-link tag="a" v-scroll-to="'#works'" to>WORKS</nuxt-link>
-        <nuxt-link tag="a" v-scroll-to="'#contact'" to>CONTACT</nuxt-link>
+        <nuxt-link tag="a" v-scroll-to="'#top'" to @click.native="eventClick('header > top', 'link', '#top')">TOP</nuxt-link>
+        <nuxt-link tag="a" v-scroll-to="'#about'" to @click.native="eventClick('header > about', 'link', '#about')">ABOUT</nuxt-link>
+        <nuxt-link tag="a" v-scroll-to="'#works'" to @click.native="eventClick('header > works', 'link', '#works')">WORKS</nuxt-link>
+        <nuxt-link tag="a" v-scroll-to="'#contact'" to @click.native="eventClick('header > contact', 'link', '#contact')">CONTACT</nuxt-link>
       </div>
       <nav class="sm-header" :class="{active:active}">
       <button class="menu-icon" @click="doAction()"><span></span></button>
       <ul>
-        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#top'" to>TOP</nuxt-link></li>
-        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#about'" to>ABOUT</nuxt-link></li>
-        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#works'" to>WORKS</nuxt-link></li>
-        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#contact'" to>CONTACT</nuxt-link></li>
+        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#top'" to @click.native="eventClick('header > top', 'link', '#top')">TOP</nuxt-link></li>
+        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#about'" to @click.native="eventClick('header > about', 'link', '#about')">ABOUT</nuxt-link></li>
+        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#works'" to @click.native="eventClick('header > works', 'link', '#works')">WORKS</nuxt-link></li>
+        <li><nuxt-link class="menu-in" tag="a" v-scroll-to="'#contact'" to @click.native="eventClick('header > contact', 'link', '#contact')">CONTACT</nuxt-link></li>
       </ul>
     </nav>
   </div>
@@ -30,6 +30,21 @@ export default {
         doAction:function() {
             this.active = !this.active 
         },
+        eventClick(click_name, event_category, click_url ) {
+            const event = 'my-custom-event'
+            const page_url = location.hostname + location.pathname
+            const page_title = document.title
+
+            //console.log(click_name, event_category, click_url, event, page_url, page_title)
+            this.$gtm.push({
+                event: event,
+                click_name: click_name,
+                event_category: event_category,
+                page_url: page_url,
+                page_title: page_title,
+                click_url: click_url,
+            })
+        }
     },
 }
 </script>
